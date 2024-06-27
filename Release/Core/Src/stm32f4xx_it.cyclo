@@ -1,0 +1,11 @@
+../Core/Src/stm32f4xx_it.c:57:7:edf_schedule	6
+../Core/Src/stm32f4xx_it.c:90:7:SVC_Handler	1
+../Core/Src/stm32f4xx_it.c:100:7:SVC_Handler_Main	5
+../Core/Src/stm32f4xx_it.c:185:6:NMI_Handler	1
+../Core/Src/stm32f4xx_it.c:200:6:HardFault_Handler	1
+../Core/Src/stm32f4xx_it.c:215:6:MemManage_Handler	1
+../Core/Src/stm32f4xx_it.c:230:6:BusFault_Handler	1
+../Core/Src/stm32f4xx_it.c:245:6:UsageFault_Handler	1
+../Core/Src/stm32f4xx_it.c:273:6:DebugMon_Handler	1
+../Core/Src/stm32f4xx_it.c:286:6:PendSV_Handler	1
+../Core/Src/stm32f4xx_it.c:332:6:SysTick_Handler	5

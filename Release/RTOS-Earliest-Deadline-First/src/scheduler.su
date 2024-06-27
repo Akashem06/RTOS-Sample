@@ -1,0 +1,4 @@
+../RTOS-Earliest-Deadline-First/src/scheduler.c:19:12:init_scheduler	24	static
+../RTOS-Earliest-Deadline-First/src/scheduler.c:57:12:create_task	32	static
+../RTOS-Earliest-Deadline-First/src/scheduler.c:108:12:start_scheduler	0	static,ignoring_inline_asm
+../RTOS-Earliest-Deadline-First/src/scheduler.c:121:12:yield_scheduler	0	static,ignoring_inline_asm

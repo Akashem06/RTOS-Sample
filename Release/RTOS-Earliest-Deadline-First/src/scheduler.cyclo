@@ -1,0 +1,4 @@
+../RTOS-Earliest-Deadline-First/src/scheduler.c:19:12:init_scheduler	4
+../RTOS-Earliest-Deadline-First/src/scheduler.c:57:12:create_task	6
+../RTOS-Earliest-Deadline-First/src/scheduler.c:108:12:start_scheduler	2
+../RTOS-Earliest-Deadline-First/src/scheduler.c:121:12:yield_scheduler	1

@@ -1,0 +1,3 @@
+../RTOS-Earliest-Deadline-First/src/queue.c:3:12:init_queue	1
+../RTOS-Earliest-Deadline-First/src/queue.c:13:12:enqueue	3
+../RTOS-Earliest-Deadline-First/src/queue.c:26:12:dequeue	2

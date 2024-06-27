@@ -1,0 +1,3 @@
+../RTOS-Earliest-Deadline-First/src/mutex.c:5:12:init_mutex	0	static
+../RTOS-Earliest-Deadline-First/src/mutex.c:12:12:lock_mutex	16	static
+../RTOS-Earliest-Deadline-First/src/mutex.c:31:12:unlock_mutex	0	static

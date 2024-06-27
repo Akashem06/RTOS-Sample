@@ -1,0 +1,3 @@
+[submodule "RTOS-Earliest-Deadline-First"]
+	path = RTOS-Earliest-Deadline-First
+	url = https://github.com/Akashem06/RTOS-Earliest-Deadline-First.git

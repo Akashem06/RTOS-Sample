@@ -1,0 +1,3 @@
+../RTOS-Earliest-Deadline-First/src/queue.c:3:12:init_queue	0	static
+../RTOS-Earliest-Deadline-First/src/queue.c:13:12:enqueue	8	static
+../RTOS-Earliest-Deadline-First/src/queue.c:26:12:dequeue	0	static

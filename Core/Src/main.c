@@ -23,7 +23,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "scheduler.h"
+#include "task.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +46,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint32_t task_1var = 1;
+uint32_t task_2var = 2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,6 +58,37 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static void idle_task(void* args) {
+	while(1) {
+//		printf("Idling \r\n");
+//		yield_scheduler();
+
+	}
+}
+
+static void task_1(void* args) {
+	volatile uint32_t arg = (uint32_t)args;
+	while(1) {
+		arg = (arg + 1) % 100;
+		printf("TASK 1: YAY %d\r\n", arg);
+		yield_scheduler();
+	}
+}
+
+static void task_2(void* args) {
+	volatile uint32_t arg = (uint32_t)args;
+	while(1) {
+		arg = (arg + 1) % 100;
+		printf("Task 2: IM ALIVE %d\r\n", arg);
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		yield_scheduler();
+	}
+}
+
+int __io_putchar (int ch) {
+	HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+	return ch;
+}
 
 /* USER CODE END 0 */
 
@@ -75,7 +109,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -89,6 +122,13 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+//  task_1(&task_1var);
+  printf("HELLO\r\n\n");
+  init_scheduler(idle_task);
+  create_task(task_1, &task_1var, 1000, 0, "Task 1");
+  create_task(task_2, &task_2var, 5000, 15, "Task 2");
+  start_scheduler();
 
   /* USER CODE END 2 */
 
